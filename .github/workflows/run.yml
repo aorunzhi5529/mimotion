@@ -2,7 +2,7 @@ name: 刷步数
 
 on:
   schedule:
-    - cron: '13 10,12,14 * * *'
+    - cron: '18 2,4,6 * * *'
   workflow_dispatch:
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout codes
         uses: actions/checkout@v5
         with:
-          token: ${{ secrets.PAT }} #此处PAT需要申请，教程详见：README
+          token: ${{ secrets.PAT }}
       - name: Update system and install zsh
         run: |
           sudo -E apt-get -qq update
